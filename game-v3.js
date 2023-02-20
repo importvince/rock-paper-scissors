@@ -3,6 +3,7 @@ const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
 const results = document.querySelector('.results-container');
+const winner = document.querySelector('.final-results-container')
 const playerScore = document.querySelector('#player');
 const computerScore = document.querySelector('#computer');
 const tieScore = document.querySelector('#tie');
@@ -28,20 +29,24 @@ function playRound() {
         results.textContent = 'tie';
         tieTally += 1;
         tieScore.textContent = tieTally;
-        //return "tie";
     }
     else if ((player == 'rock' && computer == 'paper') || (player == 'paper' && computer == 'scissors') || (player == 'scissors' && computer == 'rock')) {
-        results.textContent = 'computer wins again...'
         computerTally += 1;
         computerScore.textContent = computerTally;
-       
-        // return `Computer wins again...`;
+        if (computerTally <= 4) {
+            results.textContent = 'computer wins again...'
+        } else {
+            winner.textContent = 'Dang! Computer wins the best of five series. Try again!'
+        }
     }
     else if((player == 'rock' && computer == 'scissors') || (player == 'scissors' && computer == 'paper') || (player == 'paper' && computer =='rock')) {
-        results.textContent = 'You win!'
         playerTally += 1;
         playerScore.textContent = playerTally;
-        //return `You win!`;
+        if (playerTally <= 4) {
+            results.textContent = 'You win!'
+        } else {
+            winner.textContent = 'Congrats! You win the best of five series.'
+        }
     }
 }
 
