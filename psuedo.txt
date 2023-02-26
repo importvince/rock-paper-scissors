@@ -1,0 +1,6 @@
+1. Create 3 buttons labeled rock paper scissors - done
+2. Initialize variables for these buttons
+3. Capture the value of each button *make sure it's lowercased
+3. Create event listeners for each button that say "when clicked, run the playRound function with the value of the button as the player argument" Result should be in string format and should tally the score for that player. 
+4. Change the console log for the result to a textContent submission of playRound return to the empty div with class name "results-container"
+5. update the div with class name "score-container" everytime

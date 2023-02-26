@@ -1,4 +1,4 @@
-// create variables for buttons, result, and scorebaord
+
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
@@ -14,8 +14,6 @@ const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', playRound)
 });
-
-//let computerPlay = getComputerChoice();
 
 let playerTally = 0;
 let computerTally = 0;
@@ -62,5 +60,3 @@ function getComputerChoice() {
     else computerSelection = 'scissors';
     return computerSelection;
 }
-
-let playerSelection;
